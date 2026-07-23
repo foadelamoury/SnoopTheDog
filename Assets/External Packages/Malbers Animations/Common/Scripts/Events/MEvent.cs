@@ -1,4 +1,4 @@
-﻿using MalbersAnimations.Scriptables;
+using MalbersAnimations.Scriptables;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -199,7 +199,7 @@ namespace MalbersAnimations.Events
 
         public virtual void InvokeAsFloat(bool value) => Invoke(value ? 1 : 0);
         public virtual void InvokeAsInt(bool value) => Invoke(value ? 1 : 0);
-        public virtual void InvokeAsInt(Object value) => Invoke(value != null ? value.GetInstanceID() : -1);
+        public virtual void InvokeAsInt(Object value) => Invoke(value != null ? value.GetEntityId().GetHashCode() : -1);
 
 
         private void DebugEvent(object value, string type)

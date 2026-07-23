@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Linq;
 using System.IO;
 using Object = UnityEngine.Object;
@@ -235,7 +235,7 @@ namespace MalbersAnimations
             if (obj == null) return false;
 
 
-            string path = AssetDatabase.GetAssetPath(obj.GetInstanceID());
+            string path = AssetDatabase.GetAssetPath(obj.GetEntityId());
             if (path.Length > 0)
             {
                 if (Directory.Exists(path))

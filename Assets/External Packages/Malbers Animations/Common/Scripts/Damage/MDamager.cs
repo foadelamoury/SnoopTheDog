@@ -1,4 +1,4 @@
-﻿using MalbersAnimations.Events;
+using MalbersAnimations.Events;
 using MalbersAnimations.Scriptables;
 using MalbersAnimations.Utilities;
 using MalbersAnimations.Reactions;
@@ -119,7 +119,7 @@ namespace MalbersAnimations.Controller
 
         [Tooltip("Prevent damaging the same damageable twice in the same attack")]
         public bool preventDuplicateDamage; //CustomPatch: Avoid multiple hits on the same damageable in the same attack
-        protected HashSet<int> lastHitDamageablesSet = new(5); //CustomPatch: Avoid multiple hits on the same damageable in the same attack
+        protected HashSet<EntityId> lastHitDamageablesSet = new(5); //CustomPatch: Avoid multiple hits on the same damageable in the same attack
 
         [Tooltip("Stores the Direction of the Attack. Used to apply the Force and to know the Direction of the Hit from the Damager")]
         protected Vector3 Direction { get; set; }
@@ -242,7 +242,7 @@ namespace MalbersAnimations.Controller
         protected void RegisterHitDamageable(IMDamage damagee)
         {
             if (damagee is UnityEngine.Object unityObj && unityObj != null)
-                lastHitDamageablesSet.Add(unityObj.GetInstanceID());
+                lastHitDamageablesSet.Add(unityObj.GetEntityId());
         }
 
         //CustomPatch: Avoid multiple hits on the same damageable in the same attack
@@ -250,7 +250,7 @@ namespace MalbersAnimations.Controller
         protected bool IsHitDamageableRegistered(IMDamage damagee)
         {
             if (damagee is UnityEngine.Object unityObj && unityObj != null)
-                return lastHitDamageablesSet.Contains(unityObj.GetInstanceID());
+                return lastHitDamageablesSet.Contains(unityObj.GetEntityId());
 
             return false;
         }

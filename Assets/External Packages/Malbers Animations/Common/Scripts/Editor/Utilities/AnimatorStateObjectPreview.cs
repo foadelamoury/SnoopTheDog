@@ -10,7 +10,7 @@ namespace MalbersAnimations
     public class AnimatorStateObjectPreview : ObjectPreview
     {
         Editor _preview;
-        int _animationClipId = 0;
+        EntityId _animationClipId = default;
 
         static FieldInfo _cachedAvatarPreviewField;
         static FieldInfo _cachedTimeControlField;
@@ -30,7 +30,7 @@ namespace MalbersAnimations
             if (clip != null)
             {
                 _preview = Editor.CreateEditor(clip);
-                _animationClipId = clip.GetInstanceID();
+                _animationClipId = clip.GetEntityId();
             }
         }
 
@@ -65,11 +65,11 @@ namespace MalbersAnimations
 
             AnimationClip clip = GetAnimationClip(target as AnimatorState);
 
-            if (clip != null && clip.GetInstanceID() != _animationClipId)
+            if (clip != null && clip.GetEntityId() != _animationClipId)
             {
                 CleanUpPreviewEditor();
                 _preview = Editor.CreateEditor(clip);
-                _animationClipId = clip.GetInstanceID();
+                _animationClipId = clip.GetEntityId();
                 return;
             }
 
