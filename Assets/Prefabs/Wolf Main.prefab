@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 6943845348117905013}
   - component: {fileID: 5501575530594105053}
   m_Layer: 20
-  m_Name: Wolf Lite
+  m_Name: Wolf Main
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
