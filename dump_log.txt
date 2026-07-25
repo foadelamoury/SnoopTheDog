@@ -1,0 +1,4 @@
+CreateDefaultCurves(AnimationWindowState,ReadOnlySpan`1,)
+CreateDefaultCurves(AnimationWindowState,IAnimationWindowClip,ReadOnlySpan`1,)
+CreateRendererForCurve(AnimationWindowCurve,)
+CreateKeyPreprocessorForCurve(AnimationWindowCurve,)

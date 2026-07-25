@@ -1,0 +1,145 @@
+=== SNOOPY BONES ===
+Snoopy
+  snoopy
+  SnoopyArmature
+    Pelvis
+      Spine
+        L Thigh
+          L Calf
+            L HorseLink
+              L Foot
+                L Foot_end
+        R Thigh
+          R Calf
+            R HorseLink
+              R Foot
+                R Foot_end
+        Spine1
+          Spine2
+            Neck
+              Head
+                Eye L
+                  Eye L_end
+                Eye R
+                  Eye R_end
+                Jaw
+                  Tongue
+                    Tongue_end
+                L Ear
+                  L Ear_end
+                R Ear
+                  R Ear_end
+              L Clavicle
+                L UpperArm
+                  L Forearm
+                    L Hand
+                      L Hand_end
+              R Clavicle
+                R UpperArm
+                  R Forearm
+                    R Hand
+                      R Hand_end
+        Tail
+          Tail1
+            Tail2
+              Tail3
+                Tail3_end
+
+=== WOLF BONES ===
+Wolf Lite
+  CG
+    Pelvis
+      Spine
+        L Thigh
+          L Calf
+            L HorseLink
+              L Foot
+                L Foot_end
+                  L Foot_end_end
+        R Thigh
+          R Calf
+            R HorseLink
+              R Foot
+                R Foot_end
+                  R Foot_end_end
+        Spine1
+          Spine2
+            Neck
+              Head
+                Eye L
+                  Eye L_end
+                    Eye L_end_end
+                Eye R
+                  Eye R_end
+                    Eye R_end_end
+                Jaw
+                  Tongue
+                    Tongue_end
+                      Tongue_end_end
+                L Ear
+                  L Ear_end
+                    L Ear_end_end
+                R Ear
+                  R Ear_end
+                    R Ear_end_end
+              L Clavicle
+                L UpperArm
+                  L Forearm
+                    L Hand
+                      L Hand_end
+                        L Hand_end_end
+              R Clavicle
+                R UpperArm
+                  R Forearm
+                    R Hand
+                      R Hand_end
+                        R Hand_end_end
+        Tail
+          Tail1
+            Tail2
+              Tail3
+                Tail3_end
+                  Tail3_end_end
+  Snoopy
+
+=== WOLF ANIMATION CURVE PATHS (WL_Actions) ===
+Clip: WL_Drink
+  Path: 
+  Path: CG
+  Path: CG/Pelvis
+  Path: CG/Pelvis/Spine
+  Path: CG/Pelvis/Spine/Spine1
+  Path: CG/Pelvis/Spine/Spine1/Spine2
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/Jaw
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/L Ear
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/R Ear
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/L Cheek
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/R Cheek
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/Eye R
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/Head/Eye L
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm/L Forearm
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm/L Forearm/L Hand
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm/R Forearm
+  Path: CG/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm/R Forearm/R Hand
+  Path: CG/Pelvis/Spine/L Thigh
+  Path: CG/Pelvis/Spine/L Thigh/L Calf
+  Path: CG/Pelvis/Spine/L Thigh/L Calf/L HorseLink
+  Path: CG/Pelvis/Spine/L Thigh/L Calf/L HorseLink/L Foot
+  Path: CG/Pelvis/Spine/R Thigh
+  Path: CG/Pelvis/Spine/R Thigh/R Calf
+  Path: CG/Pelvis/Spine/R Thigh/R Calf/R HorseLink
+  Path: CG/Pelvis/Spine/R Thigh/R Calf/R HorseLink/R Foot
+  Path: CG/Pelvis/Spine/Tail
+  Path: CG/Pelvis/Spine/Tail/Tail1
+  Path: CG/Pelvis/Spine/Tail/Tail1/Tail2
+  Path: CG/Pelvis/Spine/Tail/Tail1/Tail2/Tail3
+
+
+=== SNOOPY ANIMATION CURVE PATHS (Snoopy_Bark) ===
+Clip: Snoopy_Bark at Assets/External Packages/Malbers Animations/Animal Controller/Wolf Lite/Animations/Snoopy/Snoopy_Bark.anim
