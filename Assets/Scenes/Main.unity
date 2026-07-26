@@ -9429,10 +9429,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy UI Stats Group
       objectReference: {fileID: 0}
-    - target: {fileID: 5111492167702829782, guid: 54639248f05cc4f40be7a1c57f1676a6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10984,10 +10980,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 542180757}
     m_Modifications:
-    - target: {fileID: 1188529767721700, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114085502652766014, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
       propertyPath: Events.Array.data[0].ResponseFloat.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -11014,11 +11006,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224036679047831266, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224036679047831266, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224099771466802532, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
       propertyPath: m_RootOrder
@@ -11106,11 +11098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7078212305564347742, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7078212305564347742, guid: fc0ba8caed599c844aea169a458f10e0, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13593,14 +13585,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2, g: 0.8, b: 0.29803923, a: 0.19607843}
+  m_Color: {r: 0.2, g: 0.8, b: 0.29803923, a: 0.29803923}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 46954745f74cf4540a87a70ed135a444, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 798085324eeb159489e49b5adc5dbc58, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18930,7 +18922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1188038953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19594,7 +19586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniMap
   _mapRectTransform: {fileID: 1374344443}
-  _playerTransform: {fileID: 4417228616095216}
+  _playerTransform: {fileID: 0}
   _mapSpeed: -2
   _waypointDotPrefab: {fileID: 3704659541876678113, guid: 8ef7aa55c88f7cd4f9fbee0e7626ca9a, type: 3}
   _pathLinePrefab: {fileID: 7583172318101415568, guid: 711b8d4db6301d545b2faaf7dbbf5ec2, type: 3}
@@ -23056,7 +23048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4116247029951166428, guid: 8a97fcfc0139bd246b36a72f911339c0, type: 3}
       propertyPath: CameraDistance
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4640536884671364797, guid: 8a97fcfc0139bd246b36a72f911339c0, type: 3}
       propertyPath: CameraDistance
@@ -24137,6 +24129,191 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6280293813812118403, guid: 3858db04d8f610d49b7bff4cee563ecc, type: 3}
+--- !u!114 &1580744575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438018832148978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580e703fe3c4ea64a855a7104b1d92f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExitByState: 0
+  ExitByMode: 0
+  UseWeaponsOnlyWhileRiding: 1
+  animal: {fileID: 114222224505786128}
+  DropPoint: {fileID: 7834495725430534490}
+  DrawWeaponModeID: {fileID: 11400000, guid: 25a9ab75d9646144eaa77342296c549c, type: 2}
+  StoreWeaponModeID: {fileID: 11400000, guid: 908d4f1fe671c064cbb3045eeb113742, type: 2}
+  UnarmedModeID: {fileID: 11400000, guid: 1286867ad3c4cdd4baacac3373aff92c, type: 2}
+  comboManager: {fileID: 8034436838289678468}
+  mainAttackBranch:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  secondAttackBranch:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  IgnoreHandOffset:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  m_IgnoreDraw:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  m_IgnoreStore:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  DisableModes:
+  - {fileID: 11400000, guid: 36ebf5306b7174949934aa62255781b1, type: 2}
+  - {fileID: 11400000, guid: 1286867ad3c4cdd4baacac3373aff92c, type: 2}
+  ExitOnModes:
+  - {fileID: 11400000, guid: 4dc5ca673dc60d346a62529c8a9bd8ff, type: 2}
+  DisableStates: []
+  ExitOnState:
+  - {fileID: 11400000, guid: 7e364e53b77644c47aa3abdaa2e2c08c, type: 2}
+  DropWeapon: []
+  ExitFast: 1
+  StoreSelfHolster: 1
+  UseExternal: 0
+  InstantiateOnEquip: 0
+  DestroyOnUnequip: 0
+  IgnoreParentWeapon: 0
+  OverrideWeaponLayer:
+    UseConstant: 1
+    ConstantValue:
+      serializedVersion: 2
+      m_Bits: 0
+    Variable: {fileID: 0}
+  UseHolsters: 1
+  holsters:
+  - ID: {fileID: 11400000, guid: 8be06e7fc27c57c4e82d4a5cafd76296, type: 2}
+    Index: 0
+    Slots:
+    - {fileID: 0}
+    Weapon: {fileID: 0}
+    Input:
+      UseConstant: 1
+      ConstantValue: Main Holster
+      Variable: {fileID: 0}
+    AutoEquip:
+      UseConstant: 1
+      ConstantValue: 1
+      Variable: {fileID: 0}
+    OnWeaponInHolster:
+      m_PersistentCalls:
+        m_Calls: []
+  LeftHandEquipPoint: {fileID: 0}
+  RightHandEquipPoint: {fileID: 0}
+  m_CombatLayerPath: Layers/Combat2
+  m_CombatLayerName: Upper Body (Weapons)
+  debug: 1
+  PreAttackConditions:
+    conditions: []
+    active: 0
+  anim: {fileID: 95706823610860586}
+  StoreAfter:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  m_WeaponType: WeaponType
+  m_IKAim: IKAim
+  m_IKFreeHand: IKFreeHand
+  m_LeftHand: LeftHand
+  m_WeaponPower: ModePower
+  m_ModeOn: ModeOn
+  m_Mode: Mode
+  Hash_IKFreeHand: 0
+  Hash_IKAim: 0
+  OnCombatMode:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a795e5b7142d68e428c3c1beb1d2c764, type: 2}
+        m_TargetAssemblyTypeName: MalbersAnimations.Scriptables.BoolVar, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCanAim:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEquipWeapon:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: eca4f98ae1362694f9a61cf46335a2d1, type: 2}
+        m_TargetAssemblyTypeName: MalbersAnimations.Events.MEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnUnequipWeapon:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackReleased:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWeaponAction:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AimInput:
+    UseConstant: 1
+    ConstantValue: 
+    Variable: {fileID: 0}
+  m_ReloadInput:
+    UseConstant: 1
+    ConstantValue: 
+    Variable: {fileID: 0}
+  m_MainAttack:
+    UseConstant: 1
+    ConstantValue: Attack1
+    Variable: {fileID: 0}
+  m_SecondAttack:
+    UseConstant: 1
+    ConstantValue: 
+    Variable: {fileID: 0}
+  m_SpecialAttack:
+    UseConstant: 1
+    ConstantValue: SpecialAttack
+    Variable: {fileID: 0}
+  DestroyOnDrop: 0
+  startWeapon:
+    UseConstant: 1
+    ConstantValue: {fileID: 0}
+    Variable: {fileID: 0}
+  aim:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  canAim:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  Editor_Tabs1: 1
+  Editor_Tabs2: 5
+  references:
+    version: 2
+    RefIds: []
 --- !u!64 &1581593974
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25469,7 +25646,7 @@ PrefabInstance:
     - target: {fileID: 114776409365645682, guid: 4314a73211c85fd4492c1bd44c74fc62, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1438018832148978}
+      objectReference: {fileID: 0}
     - target: {fileID: 114776409365645682, guid: 4314a73211c85fd4492c1bd44c74fc62, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -40514,10 +40691,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key UI
       objectReference: {fileID: 0}
-    - target: {fileID: 1747387321310396, guid: 46382f591f4b21e4b86ccec6d7be2bd6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224759153030595506, guid: 46382f591f4b21e4b86ccec6d7be2bd6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -42053,10 +42226,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aiming Dot
       objectReference: {fileID: 0}
-    - target: {fileID: 1728052246679162, guid: 36c92de63504efb42a42d658f394cdbe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114353910745635238, guid: 36c92de63504efb42a42d658f394cdbe, type: 3}
       propertyPath: UseChild.ConstantValue
       value: Head
@@ -42367,10 +42536,6 @@ PrefabInstance:
     - target: {fileID: 8327552815067077167, guid: 1c87f9005c9f4cb45ace72ace24ceb89, type: 3}
       propertyPath: m_Name
       value: Hurt UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8327552815067077167, guid: 1c87f9005c9f4cb45ace72ace24ceb89, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8327552815067077168, guid: 1c87f9005c9f4cb45ace72ace24ceb89, type: 3}
       propertyPath: m_Pivot.x
@@ -45127,6 +45292,10 @@ GameObject:
   - component: {fileID: 7972825808791867673}
   - component: {fileID: 114222224505786128}
   - component: {fileID: 114786441630749886}
+  - component: {fileID: 3350348017140652092}
+  - component: {fileID: 7762624871935088706}
+  - component: {fileID: 1580744575}
+  - component: {fileID: 6943845346975763433}
   - component: {fileID: 5501575529459303233}
   - component: {fileID: 1148040609}
   - component: {fileID: 1148040608}
@@ -45233,7 +45402,7 @@ Transform:
   m_GameObject: {fileID: 1438018832148978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.926, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45374,10 +45543,10 @@ MonoBehaviour:
   SelectedState: 9
   SelectedStance: 0
   ShowStateInInspector: 1
-  Editor_Tabs1: 2
-  Editor_Tabs2: 4
-  SelectedMode: 4
-  Mode_Tabs1: 1
+  Editor_Tabs1: 4
+  Editor_Tabs2: 0
+  SelectedMode: 3
+  Mode_Tabs1: 0
   Ability_Tabs: 0
   Editor_EventTabs: 1
   showPivots: 1
@@ -46914,14 +47083,14 @@ MonoBehaviour:
     m_Source: {fileID: 0}
     RandomAbilitiesIndex: 
     ActivationTime: 0
-  - SelectedAbilityIndexEditor: 10
+  - SelectedAbilityIndexEditor: 6
     ActiveAbilityConditions: []
     active: 1
     TemporalActivation: 1
     ignoreLowerModes: 0
     forceIgnorePriority: 1
     hasCoolDown: 0
-    Input: Attack
+    Input: Action
     ID: {fileID: 11400000, guid: 4dc5ca673dc60d346a62529c8a9bd8ff, type: 2}
     modifier: {fileID: 0}
     CoolDown:
@@ -47980,7 +48149,7 @@ MonoBehaviour:
         Variable: {fileID: 0}
       Input:
         UseConstant: 1
-        ConstantValue: Attack
+        ConstantValue: 
         Variable: {fileID: 0}
       audioClip:
         UseConstant: 1
@@ -48491,7 +48660,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3350348017140652092}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -48506,7 +48675,7 @@ MonoBehaviour:
     OnExitMode:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3350348017140652092}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -49712,7 +49881,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 5
     Variable: {fileID: 0}
-  Aimer: {fileID: 0}
+  Aimer: {fileID: 7762624871935088706}
   pivots:
   - name: Hip
     position: {x: 0, y: 0.7, z: 0}
@@ -51201,7 +51370,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 3350348017140652092}
           m_TargetAssemblyTypeName: MalbersAnimations.MDamageable, MalbersAnimations
           m_MethodName: set_enabled
           m_Mode: 6
@@ -53935,6 +54104,213 @@ Transform:
   - {fileID: 4811668592424525859}
   m_Father: {fileID: 3670862690037595157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3350348017140652092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438018832148978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775c3050f78eb2049a4d8d38b3fa5d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 0}
+  damageReaction:
+    reactions:
+    - rid: 5016934541485408525
+  criticalReaction:
+    reactions:
+    - rid: 5016934541485408526
+  damagerReaction:
+    reactions: []
+  surface: {fileID: 0}
+  ignoreDamagerReaction:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  stats: {fileID: 114786441630749886}
+  multiplier:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  AlignToDamage:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  OnlyOnMovementZero:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  AlignTime:
+    UseConstant: 1
+    ConstantValue: 0.1
+    Variable: {fileID: 0}
+  AlignCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  AlignOffset:
+    UseConstant: 1
+    ConstantValue: 0.6
+    Variable: {fileID: 0}
+  Root: {fileID: 3350348017140652092}
+  events:
+    OnReceivingDamage:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: a944e371459e9954caf261ad32156339, type: 2}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: LerpMaterial
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnCriticalDamage:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDamager:
+      m_PersistentCalls:
+        m_Calls: []
+    OnElementDamage:
+      m_PersistentCalls:
+        m_Calls: []
+    OnStatEmpty:
+      m_PersistentCalls:
+        m_Calls: []
+    OnProfileDefaultEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnProfileDefaultExit:
+      m_PersistentCalls:
+        m_Calls: []
+  elements: []
+  Default:
+    name: 
+    surface: {fileID: 0}
+    damageReaction:
+      reactions: []
+    criticalReaction:
+      reactions: []
+    damagerReaction:
+      reactions: []
+    multiplier:
+      UseConstant: 1
+      ConstantValue: 0
+      Variable: {fileID: 0}
+    AlignToDamage:
+      UseConstant: 1
+      ConstantValue: 0
+      Variable: {fileID: 0}
+    ignoreDamagerReaction:
+      UseConstant: 1
+      ConstantValue: 0
+      Variable: {fileID: 0}
+    elements: []
+    OnProfileEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnProfileExit:
+      m_PersistentCalls:
+        m_Calls: []
+  CurrentProfile:
+    name: 
+    surface: {fileID: 0}
+    damageReaction:
+      reactions: []
+    criticalReaction:
+      reactions: []
+    damagerReaction:
+      reactions: []
+    multiplier:
+      UseConstant: 1
+      ConstantValue: 0
+      Variable: {fileID: 0}
+    AlignToDamage:
+      UseConstant: 1
+      ConstantValue: 0
+      Variable: {fileID: 0}
+    ignoreDamagerReaction:
+      UseConstant: 1
+      ConstantValue: 0
+      Variable: {fileID: 0}
+    elements: []
+    OnProfileEnter:
+      m_PersistentCalls:
+        m_Calls: []
+    OnProfileExit:
+      m_PersistentCalls:
+        m_Calls: []
+  profiles: []
+  Editor_Tabs1: 2
+  FirstTime: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 5016934541485408525
+      type: {class: ModeReaction, ns: MalbersAnimations.Reactions, asm: MalbersAnimations}
+      data:
+        desc: 
+        Active: 1
+        useLocal: 0
+        localTarget: {fileID: 0}
+        delay: 0
+        type: 0
+        ID: {fileID: 11400000, guid: b04409080ae7e3c4fa645d8c67b40424, type: 2}
+        abilityStatus: 0
+        Ability:
+          UseConstant: 1
+          ConstantValue: -99
+          Variable: {fileID: 0}
+        HasCoolDown: 1
+        coolDown: 0
+        AbilityTime: 3
+        ModePower: 0
+    - rid: 5016934541485408526
+      type: {class: ModeReaction, ns: MalbersAnimations.Reactions, asm: MalbersAnimations}
+      data:
+        desc: 
+        Active: 1
+        useLocal: 0
+        localTarget: {fileID: 0}
+        delay: 0
+        type: 0
+        ID: {fileID: 11400000, guid: b04409080ae7e3c4fa645d8c67b40424, type: 2}
+        abilityStatus: 0
+        Ability:
+          UseConstant: 1
+          ConstantValue: -99
+          Variable: {fileID: 0}
+        HasCoolDown: 1
+        coolDown: 0
+        AbilityTime: 3
+        ModePower: 0
 --- !u!114 &3362469035880531690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79239,7 +79615,7 @@ MonoBehaviour:
       ConstantValue: {fileID: 0}
       Variable: {fileID: 0}
     ClearTargetsOnDisable: 0
-    aimer: {fileID: 0}
+    aimer: {fileID: 7762624871935088706}
     IKProcesors:
     - rid: 5016934541485408522
     weightProcessors:
@@ -79422,7 +79798,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  aim: {fileID: 0}
+  aim: {fileID: 7762624871935088706}
   Targets: {fileID: 11400000, guid: 1a69e13d366af4b49bc1d9e96ca49bbc, type: 2}
   NextTargetTime:
     UseConstant: 1
@@ -80089,7 +80465,7 @@ MonoBehaviour:
     ResponseBool:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1580744575}
           m_TargetAssemblyTypeName: MalbersAnimations.MWeaponManager, MalbersAnimations
           m_MethodName: MainAttack
           m_Mode: 0
@@ -80746,7 +81122,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: {fileID: 1438018832148978}
     Variable: {fileID: 0}
-  Aimer: {fileID: 0}
+  Aimer: {fileID: 7762624871935088706}
   useAimerDirection:
     UseConstant: 1
     ConstantValue: 1
@@ -80840,6 +81216,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &6943845346975763433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438018832148978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 149655f5fc18e11419380005a139e5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointType: 0
+  m_height: 0.75
+  radius: 0.7
+  slowingDistance: 0
+  center: {x: 0, y: 0, z: 0.25}
+  m_arriveLookAt: 1
+  m_TargetLimit: 0
+  m_WaitTargeterDistance: 4
+  gizmoColor: {r: 1, g: 0, b: 0, a: 0.4}
+  OnTargetArrived:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &7050466165026042136
 Transform:
   m_ObjectHideFlags: 0
@@ -81091,6 +81491,158 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7762624871935088706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438018832148978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf9548d1f32af143802e526c7043914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_active:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  m_aimOrigin: {fileID: 0}
+  m_Smoothness: 10
+  horizontalLerp: 5
+  m_aimLayer:
+    UseConstant: 1
+    ConstantValue:
+      serializedVersion: 2
+      m_Bits: 3230665473
+    Variable: {fileID: 0}
+  m_Triggers: 1
+  m_AimTarget:
+    UseConstant: 1
+    ConstantValue: {fileID: 0}
+    Variable: {fileID: 0}
+  m_AimPosition:
+    UseConstant: 1
+    ConstantValue: {fileID: 0}
+    Variable: {fileID: 0}
+  m_Ignore:
+    UseConstant: 1
+    ConstantValue: {fileID: 0}
+    Variable: {fileID: 0}
+  m_camera:
+    UseConstant: 1
+    ConstantValue: {fileID: 0}
+    Variable: {fileID: 0}
+  m_forwardCam:
+    UseConstant: 1
+    ConstantValue: 0.2
+    Variable: {fileID: 0}
+  m_cycles: 1
+  m_screenCenter:
+    UseConstant: 1
+    ConstantValue: {x: 0.5, y: 0.5}
+    Variable: {fileID: 0}
+  m_UseCamera:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  m_AimSide: 0
+  updateMode: 1
+  MaxDistance: 100
+  m_UseRaycasting:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  rayRadius:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  RayHits: 5
+  useAimAssist:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  OnAimRayTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4bc2ab8546709574cb4c726c9a520da6, type: 2}
+        m_TargetAssemblyTypeName: MalbersAnimations.Events.MEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnScreenCenter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4bc2ab8546709574cb4c726c9a520da6, type: 2}
+        m_TargetAssemblyTypeName: MalbersAnimations.Events.MEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnAimSide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 774c7acaf3bb1304fb314cd4bd618fcb, type: 2}
+        m_TargetAssemblyTypeName: MalbersAnimations.Events.MEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 774c7acaf3bb1304fb314cd4bd618fcb, type: 2}
+        m_TargetAssemblyTypeName: MalbersAnimations.Events.MEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnAiming:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUsingTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSetTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  OnClearTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  debug: 1
+  m_Animator: {fileID: 0}
+  m_AimHorizontal: AimHorizontal
+  m_AimVertical: AimVertical
+  AngleLerp:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  EditorTab1: 0
 --- !u!199 &7762835902682381635
 ParticleSystemRenderer:
   serializedVersion: 7
@@ -81288,7 +81840,7 @@ MonoBehaviour:
   OnItemPicked:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1580744575}
         m_TargetAssemblyTypeName: MalbersAnimations.MWeaponManager, MalbersAnimations
         m_MethodName: Holster_SetWeapon
         m_Mode: 0
@@ -82204,6 +82756,146 @@ MonoBehaviour:
       OnInputV2Value:
         m_PersistentCalls:
           m_Calls: []
+    - reference: {fileID: -2167323346292599436, guid: d65337a759dd2234caf37eb0e7c27d9e, type: 3}
+      active:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      ResetOnDisable:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      ignoreOnPause:
+        UseConstant: 1
+        ConstantValue: 0
+        Variable: {fileID: 0}
+      interaction: 6
+      DoubleTapTime:
+        UseConstant: 1
+        ConstantValue: 0.3
+        Variable: {fileID: 0}
+      LongPressTime:
+        UseConstant: 1
+        ConstantValue: 0.5
+        Variable: {fileID: 0}
+      LongPressDelay:
+        UseConstant: 1
+        ConstantValue: 0
+        Variable: {fileID: 0}
+      PressThreshold:
+        UseConstant: 1
+        ConstantValue: 0.5
+        Variable: {fileID: 0}
+      InputUpFailed:
+        UseConstant: 1
+        ConstantValue: 0.1
+        Variable: {fileID: 0}
+      Vector2Mult:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      debug: 0
+      name: Attack1
+      OnInputDown:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputEnabled:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputDisabled:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputUp:
+        m_PersistentCalls:
+          m_Calls: []
+      OnLongPress:
+        m_PersistentCalls:
+          m_Calls: []
+      OnDoubleTap:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputChanged:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputPressed:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputFloatValue:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputV2Value:
+        m_PersistentCalls:
+          m_Calls: []
+    - reference: {fileID: -6293479270291715131, guid: d65337a759dd2234caf37eb0e7c27d9e, type: 3}
+      active:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      ResetOnDisable:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      ignoreOnPause:
+        UseConstant: 1
+        ConstantValue: 0
+        Variable: {fileID: 0}
+      interaction: 6
+      DoubleTapTime:
+        UseConstant: 1
+        ConstantValue: 0.3
+        Variable: {fileID: 0}
+      LongPressTime:
+        UseConstant: 1
+        ConstantValue: 0.5
+        Variable: {fileID: 0}
+      LongPressDelay:
+        UseConstant: 1
+        ConstantValue: 0
+        Variable: {fileID: 0}
+      PressThreshold:
+        UseConstant: 1
+        ConstantValue: 0.5
+        Variable: {fileID: 0}
+      InputUpFailed:
+        UseConstant: 1
+        ConstantValue: 0.1
+        Variable: {fileID: 0}
+      Vector2Mult:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      debug: 0
+      name: Attack2
+      OnInputDown:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputEnabled:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputDisabled:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputUp:
+        m_PersistentCalls:
+          m_Calls: []
+      OnLongPress:
+        m_PersistentCalls:
+          m_Calls: []
+      OnDoubleTap:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputChanged:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputPressed:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputFloatValue:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputV2Value:
+        m_PersistentCalls:
+          m_Calls: []
     - reference: {fileID: -3420281069009276692, guid: d65337a759dd2234caf37eb0e7c27d9e, type: 3}
       active:
         UseConstant: 1
@@ -82684,6 +83376,88 @@ MonoBehaviour:
       OnInputV2Value:
         m_PersistentCalls:
           m_Calls: []
+    - reference: {fileID: -7348635160181649274, guid: d65337a759dd2234caf37eb0e7c27d9e, type: 3}
+      active:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      ResetOnDisable:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      ignoreOnPause:
+        UseConstant: 1
+        ConstantValue: 0
+        Variable: {fileID: 0}
+      interaction: 1
+      DoubleTapTime:
+        UseConstant: 1
+        ConstantValue: 0.3
+        Variable: {fileID: 0}
+      LongPressTime:
+        UseConstant: 1
+        ConstantValue: 0.5
+        Variable: {fileID: 0}
+      LongPressDelay:
+        UseConstant: 1
+        ConstantValue: 0
+        Variable: {fileID: 0}
+      PressThreshold:
+        UseConstant: 1
+        ConstantValue: 0.5
+        Variable: {fileID: 0}
+      InputUpFailed:
+        UseConstant: 1
+        ConstantValue: 0.1
+        Variable: {fileID: 0}
+      Vector2Mult:
+        UseConstant: 1
+        ConstantValue: 1
+        Variable: {fileID: 0}
+      debug: 0
+      name: LockOn
+      OnInputDown:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 5624927867100466872}
+            m_TargetAssemblyTypeName: MalbersAnimations.Utilities.LockOnTarget, MalbersAnimations
+            m_MethodName: LockTargetToggle
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      OnInputEnabled:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputDisabled:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputUp:
+        m_PersistentCalls:
+          m_Calls: []
+      OnLongPress:
+        m_PersistentCalls:
+          m_Calls: []
+      OnDoubleTap:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputChanged:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputPressed:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputFloatValue:
+        m_PersistentCalls:
+          m_Calls: []
+      OnInputV2Value:
+        m_PersistentCalls:
+          m_Calls: []
     - reference: {fileID: 287735634167404634, guid: d65337a759dd2234caf37eb0e7c27d9e, type: 3}
       active:
         UseConstant: 1
@@ -82888,76 +83662,6 @@ MonoBehaviour:
         Variable: {fileID: 0}
       debug: 0
       name: Main Holster
-      OnInputDown:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputEnabled:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputDisabled:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputUp:
-        m_PersistentCalls:
-          m_Calls: []
-      OnLongPress:
-        m_PersistentCalls:
-          m_Calls: []
-      OnDoubleTap:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputChanged:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputPressed:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputFloatValue:
-        m_PersistentCalls:
-          m_Calls: []
-      OnInputV2Value:
-        m_PersistentCalls:
-          m_Calls: []
-    - reference: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-      active:
-        UseConstant: 1
-        ConstantValue: 1
-        Variable: {fileID: 0}
-      ResetOnDisable:
-        UseConstant: 1
-        ConstantValue: 1
-        Variable: {fileID: 0}
-      ignoreOnPause:
-        UseConstant: 1
-        ConstantValue: 0
-        Variable: {fileID: 0}
-      interaction: 0
-      DoubleTapTime:
-        UseConstant: 1
-        ConstantValue: 0.3
-        Variable: {fileID: 0}
-      LongPressTime:
-        UseConstant: 1
-        ConstantValue: 0.5
-        Variable: {fileID: 0}
-      LongPressDelay:
-        UseConstant: 1
-        ConstantValue: 0
-        Variable: {fileID: 0}
-      PressThreshold:
-        UseConstant: 1
-        ConstantValue: 0.5
-        Variable: {fileID: 0}
-      InputUpFailed:
-        UseConstant: 1
-        ConstantValue: 0.1
-        Variable: {fileID: 0}
-      Vector2Mult:
-        UseConstant: 1
-        ConstantValue: 1
-        Variable: {fileID: 0}
-      debug: 0
-      name: Bark
       OnInputDown:
         m_PersistentCalls:
           m_Calls: []
