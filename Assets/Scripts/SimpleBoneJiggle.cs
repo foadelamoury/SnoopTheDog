@@ -33,14 +33,28 @@ public class SimpleBoneJiggle : MonoBehaviour
         // 2. Spring physics: Pull the simulated tip towards the target tip
         Vector3 force = (targetTipPos - simulatedTipPos) * stiffness;
         velocity = (velocity + force) * (1f - damping);
+        
+        // Clamp velocity to prevent physics explosions
+        velocity = Vector3.ClampMagnitude(velocity, boneLength * 10f);
+        
         simulatedTipPos += velocity;
 
         // 3. Prevent the bone from stretching by forcing the simulated tip to stay at 'boneLength' distance
-        Vector3 jiggleDir = (simulatedTipPos - transform.position).normalized;
+        Vector3 dir = simulatedTipPos - transform.position;
+        if (dir.sqrMagnitude < 0.0001f)
+        {
+            dir = transform.TransformDirection(boneAxis.normalized);
+        }
+        Vector3 jiggleDir = dir.normalized;
         simulatedTipPos = transform.position + jiggleDir * boneLength;
 
         // 4. Calculate the rotation difference and apply it
-        Quaternion jiggleRotation = Quaternion.FromToRotation(transform.TransformDirection(boneAxis.normalized), jiggleDir);
-        transform.rotation = jiggleRotation * transform.rotation;
+        Vector3 currentBoneDir = transform.TransformDirection(boneAxis.normalized);
+        Quaternion jiggleRotation = Quaternion.FromToRotation(currentBoneDir, jiggleDir);
+        
+        if (!float.IsNaN(jiggleRotation.x) && !float.IsNaN(jiggleRotation.y) && !float.IsNaN(jiggleRotation.z) && !float.IsNaN(jiggleRotation.w))
+        {
+            transform.rotation = jiggleRotation * transform.rotation;
+        }
     }
 }
