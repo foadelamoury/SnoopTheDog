@@ -79,6 +79,17 @@ public class MiniMap : MonoBehaviour
     /// <param name="waypoints">Ordered list of world-space positions</param>
     /// <param name="dotColor">Color for waypoint dots</param>
     /// <param name="lineColor">Color for connecting lines</param>
+    public void ClearWaypointPath()
+    {
+        if (_waypointParent == null) return;
+        
+        // Destroy all drawn dots and lines
+        for (int i = _waypointParent.childCount - 1; i >= 0; i--)
+        {
+            Destroy(_waypointParent.GetChild(i).gameObject);
+        }
+    }
+
     public void DrawWaypointPath(List<Vector3> waypoints, Color dotColor, Color lineColor)
     {
         if (_waypointParent == null || waypoints == null || waypoints.Count == 0) return;

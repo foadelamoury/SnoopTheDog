@@ -407,7 +407,7 @@ namespace MalbersAnimations.Controller
             Item.transform.parent = parent;               //Parent it to the Holder
             Item.transform.localPosition = pos;           //Offset the Position
             Item.transform.localEulerAngles = rot;        //Offset the Rotation
-            Item.transform.localScale = localScale;       //Offset the Rotation
+            // Item.transform.localScale = localScale;       //Offset the Rotation
         }
 
 

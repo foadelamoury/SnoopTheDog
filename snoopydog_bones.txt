@@ -1,0 +1,45 @@
+SnoopyDog
+SnoopyDog/SnoopyArmature
+SnoopyDog/SnoopyArmature/Pelvis
+SnoopyDog/SnoopyArmature/Pelvis/Spine
+SnoopyDog/SnoopyArmature/Pelvis/Spine/L Thigh
+SnoopyDog/SnoopyArmature/Pelvis/Spine/L Thigh/L Calf
+SnoopyDog/SnoopyArmature/Pelvis/Spine/L Thigh/L Calf/L HorseLink
+SnoopyDog/SnoopyArmature/Pelvis/Spine/L Thigh/L Calf/L HorseLink/L Foot
+SnoopyDog/SnoopyArmature/Pelvis/Spine/L Thigh/L Calf/L HorseLink/L Foot/L Foot_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/R Thigh
+SnoopyDog/SnoopyArmature/Pelvis/Spine/R Thigh/R Calf
+SnoopyDog/SnoopyArmature/Pelvis/Spine/R Thigh/R Calf/R HorseLink
+SnoopyDog/SnoopyArmature/Pelvis/Spine/R Thigh/R Calf/R HorseLink/R Foot
+SnoopyDog/SnoopyArmature/Pelvis/Spine/R Thigh/R Calf/R HorseLink/R Foot/R Foot_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Eye L
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Eye L/Eye L_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Eye R
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Eye R/Eye R_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Jaw
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Jaw/Tongue
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/Jaw/Tongue/Tongue_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/L Ear
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/L Ear/L Ear_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/R Ear
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/Head/R Ear/R Ear_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm/L Forearm
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm/L Forearm/L Hand
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/L Clavicle/L UpperArm/L Forearm/L Hand/L Hand_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm/R Forearm
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm/R Forearm/R Hand
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Spine1/Spine2/Neck/R Clavicle/R UpperArm/R Forearm/R Hand/R Hand_end
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Tail
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Tail/Tail1
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Tail/Tail1/Tail2
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Tail/Tail1/Tail2/Tail3
+SnoopyDog/SnoopyArmature/Pelvis/Spine/Tail/Tail1/Tail2/Tail3/Tail3_end
+SnoopyDog/SnoopyDog
