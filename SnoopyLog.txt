@@ -1,5 +1,1 @@
-Starting Snoopy modification...
-Found Snoopy Controller.
-MInput not found.
-Aim not found.
-Weapon Manager not found.
+Snoopy Controller not found in the current scene.
