@@ -48,6 +48,7 @@ namespace BarkAndDeliver.Delivery
         private bool hasInteracted = false;
         private bool isGiver = true; // true = this NPC gives the pizza; false = this NPC receives it
         private Action currentOnComplete;
+        private InteractionObject activeInteractionObject;
 
         // ── Lifting State ──
         private bool isLifting = false;
@@ -107,6 +108,7 @@ namespace BarkAndDeliver.Delivery
             Debug.Log($"[NPCInteractionBridge] Starting GIVE interaction on {gameObject.name}");
 
             // Start interaction with BOTH hands simultaneously
+            activeInteractionObject = pizzaInteractionObject;
             interactionSystem.StartInteraction(FullBodyBipedEffector.LeftHand, pizzaInteractionObject, false);
             interactionSystem.StartInteraction(FullBodyBipedEffector.RightHand, pizzaInteractionObject, false);
         }
@@ -151,7 +153,10 @@ namespace BarkAndDeliver.Delivery
             // If we have a specific interaction object for the dropped item, use it
             InteractionObject intObj = null;
             if (droppedItem != null)
+            {
+                pizzaBoxTransform = droppedItem;
                 intObj = droppedItem.GetComponent<InteractionObject>();
+            }
 
             // Fallback to the pre-assigned pizza interaction object
             if (intObj == null)
@@ -178,6 +183,7 @@ namespace BarkAndDeliver.Delivery
             MAnimal dog = MAnimal.MainAnimal;
             if (dog != null) dog.LockInput = true;
 
+            activeInteractionObject = intObj;
             interactionSystem.StartInteraction(FullBodyBipedEffector.LeftHand, intObj, false);
             interactionSystem.StartInteraction(FullBodyBipedEffector.RightHand, intObj, false);
         }
@@ -192,7 +198,7 @@ namespace BarkAndDeliver.Delivery
         /// </summary>
         private void OnInteractionPaused(FullBodyBipedEffector effector, InteractionObject interactionObject)
         {
-            if (interactionObject != pizzaInteractionObject) return;
+            if (!IsActiveInteractionObject(interactionObject)) return;
 
             Debug.Log($"[NPCInteractionBridge] Interaction PAUSED on {effector} — isGiver: {isGiver}");
 
@@ -222,7 +228,7 @@ namespace BarkAndDeliver.Delivery
                 {
                     pizzaBoxTransform.SetParent(holdPoint);
                     pizzaBoxTransform.localPosition = Vector3.zero;
-                    pizzaBoxTransform.localRotation = Quaternion.identity;
+                    SetItemVisible(pizzaBoxTransform, true);
                 }
 
                 // DON'T resume — keep hands holding the pizza!
@@ -243,7 +249,7 @@ namespace BarkAndDeliver.Delivery
         /// </summary>
         private void OnInteractionResumed(FullBodyBipedEffector effector, InteractionObject interactionObject)
         {
-            if (interactionObject != pizzaInteractionObject) return;
+            if (!IsActiveInteractionObject(interactionObject)) return;
 
             Debug.Log($"[NPCInteractionBridge] Interaction RESUMED (hands retracting) — effector: {effector}");
         }
@@ -253,7 +259,7 @@ namespace BarkAndDeliver.Delivery
         /// </summary>
         private void OnInteractionStopped(FullBodyBipedEffector effector, InteractionObject interactionObject)
         {
-            if (interactionObject != pizzaInteractionObject) return;
+            if (!IsActiveInteractionObject(interactionObject)) return;
             // Only finalize once (when both hands are done)
             if (effector != FullBodyBipedEffector.LeftHand) return;
 
@@ -268,6 +274,8 @@ namespace BarkAndDeliver.Delivery
             {
                 OnGaveItemToDog?.Invoke();
             }
+
+            activeInteractionObject = null;
         }
 
         // ══════════════════════════════════════════════════════════
@@ -320,9 +328,6 @@ namespace BarkAndDeliver.Delivery
             // Un-parent pizza from NPC
             pizzaBoxTransform.SetParent(null);
 
-            // Make visible
-            SetItemVisible(pizzaBoxTransform, true);
-
             // Try to use Malbers MPickUp
             var pickable = pizzaBoxTransform.GetComponent<Pickable>();
             if (pickable != null)
@@ -351,6 +356,9 @@ namespace BarkAndDeliver.Delivery
                 }
             }
 
+            // Hide the pizza mesh while the dog is carrying it.
+            SetItemVisible(pizzaBoxTransform, false);
+
             Debug.Log("[NPCInteractionBridge] Pizza transferred to dog!");
         }
 
@@ -373,6 +381,12 @@ namespace BarkAndDeliver.Delivery
             }
         }
 
+        private bool IsActiveInteractionObject(InteractionObject interactionObject)
+        {
+            return interactionObject != null &&
+                   (interactionObject == activeInteractionObject || interactionObject == pizzaInteractionObject);
+        }
+
         // ══════════════════════════════════════════════════════════
         //  MISSION MANAGER API
         // ══════════════════════════════════════════════════════════
@@ -391,7 +405,15 @@ namespace BarkAndDeliver.Delivery
             {
                 pizzaBox.SetParent(null);
                 pizzaBox.position = tablePoint.position;
-                pizzaBox.rotation = tablePoint.rotation;
+                
+                // Stop any leftover physics movement from the previous drop
+                var rb = pizzaBox.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.linearVelocity = Vector3.zero;
+                    rb.angularVelocity = Vector3.zero;
+                }
+
                 SetItemVisible(pizzaBox, true);
             }
         }

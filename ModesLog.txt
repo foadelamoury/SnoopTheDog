@@ -1,1 +1,43 @@
-Snoopy Controller not found.
+Modes for Snoopy:
+Mode: Attack2 (Input: Attack2)
+  Ability: Bolt
+Mode: Attack1 (Input: )
+  Ability: Attack Bite Left
+  Ability: Attack Claws
+  Ability: Paw Right
+  Ability: Paw Left
+Mode: Damage (Input: Damage)
+  Ability: Left
+  Ability: Right
+Mode: PickUp (Input: )
+  Ability: Pick Up
+  Ability: Drop
+Mode: Action (Input: Attack)
+  Ability: Eat
+  Ability: Drink
+  Ability: Howl
+  Ability: Crawl
+  Ability: Dig
+  Ability: Open Chest
+  Ability: Sit
+  Ability: Sleep
+  Ability: Lie
+  Ability: Stun
+  Ability: Bark
+  Ability: Pet
+  Ability: Shake Water
+Mode: Dash (Input: Dodge)
+  Ability: Dash
+Mode: Melee (Input: )
+  Ability: WL_Melee_Swing1
+  Ability: WL_Melee_Swing2
+  Ability: WL_Melee_Swing3
+  Ability: WL_Melee_Swing4
+Mode: Weapon Draw (Input: )
+  Ability: Holster Right Draw
+  Ability: Holster Left Draw
+Mode: Weapon Store (Input: )
+  Ability: Holster Right Store
+  Ability: Holster Left Store
+
+MInputs:

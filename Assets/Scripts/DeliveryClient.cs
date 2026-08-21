@@ -52,11 +52,13 @@ public class DeliveryClient : MonoBehaviour
         if (hasItem)
         {
             // See if this NPC has a NPCInteractionBridge to play the IK receive animation
-            var interactionBridge = GetComponent<BarkAndDeliver.Delivery.NPCInteractionBridge>();
+            var interactionBridge = GetComponent<BarkAndDeliver.Delivery.NPCInteractionBridge>() ??
+                                    GetComponentInParent<BarkAndDeliver.Delivery.NPCInteractionBridge>() ??
+                                    GetComponentInChildren<BarkAndDeliver.Delivery.NPCInteractionBridge>();
             if (interactionBridge != null)
             {
-                // If we don't have the physical item object because of the fallback, pass a dummy or null
-                Transform itemTransform = itemObj != null ? itemObj.transform : this.transform; 
+                // If we don't have the physical item object because of the fallback, let the bridge use its assigned pizza.
+                Transform itemTransform = itemObj != null ? itemObj.transform : null; 
                 
                 interactionBridge.StartReceiveFromDog(itemTransform, () => 
                 {
